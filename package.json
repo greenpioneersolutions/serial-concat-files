@@ -27,6 +27,9 @@
       "expect",
       "inject",
       "before"
+    ],
+    "ignore": [
+      "test/"
     ]
   },
   "devDependencies": {
