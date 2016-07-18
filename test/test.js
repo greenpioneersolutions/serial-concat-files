@@ -5,8 +5,9 @@ describe('serial-concat-files', function () {
   before(function (done) {
     if (!fs.existsSync(__dirname + '/files/')) {
       fs.mkdir(__dirname + '/files/', done)
+    } else {
+      done()
     }
-    done()
   })
   describe('files test', function () {
     it('3 files A', function (done) {
