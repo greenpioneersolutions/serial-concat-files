@@ -4,16 +4,13 @@
   "description": "concat files in serial order",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm run mocha && npm run standard",
+    "mocha": "node node_modules/mocha/bin/mocha test/test.js  ",
+    "standard": "node node_modules/standard/bin/cmd.js || standard"
   },
   "repository": {
     "type": "git",
     "url": "git+https://greenpioneer@github.com/greenpioneersolutions/serial-concat-files.git"
-  },
-  "scripts": {
-    "test": "npm run mocha && npm run standard",
-    "mocha": "node node_modules/mocha/bin/mocha test/test.js  ",
-    "standard": "node node_modules/standard/bin/cmd.js || standard"
   },
   "standard": {
     "globals": [
@@ -30,6 +27,9 @@
       "expect",
       "inject",
       "before"
+    ],
+    "ignore": [
+      "test/"
     ]
   },
   "devDependencies": {
@@ -55,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/greenpioneersolutions/serial-concat-files/issues"
   },
-  "homepage": "https://github.com/greenpioneersolutions/serial-concat-files#readme"
+  "homepage": "https://github.com/greenpioneersolutions/serial-concat-files#readme",
+  "dependencies": {
+    "serial-loop": "^3.0.0"
+  }
 }

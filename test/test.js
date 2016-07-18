@@ -1,12 +1,14 @@
 var assert = require('chai').assert
 var fs = require('fs')
+var path = require('path')
 var concat = require('../')
 describe('serial-concat-files', function () {
   before(function (done) {
-    if (!fs.existsSync(__dirname + '/files/')) {
-      fs.mkdir(__dirname + '/files/', done)
+    if (!fs.existsSync(path.join(__dirname + '/files/'))) {
+      fs.mkdir(path.join(__dirname + '/files/'), done)
+    } else {
+      done()
     }
-    done()
   })
   describe('files test', function () {
     it('3 files A', function (done) {
