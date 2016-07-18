@@ -1,0 +1,59 @@
+{
+  "name": "serial-concat-files",
+  "version": "1.0.0",
+  "description": "concat files in serial order",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://greenpioneer@github.com/greenpioneersolutions/serial-concat-files.git"
+  },
+  "scripts": {
+    "test": "npm run mocha && npm run standard",
+    "mocha": "node node_modules/mocha/bin/mocha test/test.js  ",
+    "standard": "node node_modules/standard/bin/cmd.js || standard"
+  },
+  "standard": {
+    "globals": [
+      "angular",
+      "toastr",
+      "moment",
+      "self",
+      "_",
+      "describe",
+      "it",
+      "__dirname",
+      "localStorage",
+      "io",
+      "expect",
+      "inject",
+      "before"
+    ]
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "standard": "^7.1.2"
+  },
+  "contributors": [
+    {
+      "name": "greenpioneersolutions",
+      "email": "green@greenpioneersolutions.com",
+      "web": "https://github.com/greenpioneersolutions"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "greenpioneersolutions",
+      "web": "https://github.com/greenpioneersolutions?tab=members"
+    }
+  ],
+  "author": "Green Pioneer <green@greenpioneersolutions.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greenpioneersolutions/serial-concat-files/issues"
+  },
+  "homepage": "https://github.com/greenpioneersolutions/serial-concat-files#readme"
+}
