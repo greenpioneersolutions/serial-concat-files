@@ -1,5 +1,5 @@
 # serial-concat-files
-concat files in serial order
+concat files in order
 
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
@@ -19,21 +19,26 @@ concat files in serial order
 ## Install
 
 ```bash
-$ npm i -s serial-concat-files
+# NPM
+npm i -s serial-concat-files
+# YARN
+yarn add serial-concat-files
 ```
 
 ## Usage
 
 ```js
-var concat = require('concat')
-
-concat(['a.css', 'b.css', 'c.css'], 'all.css', function (error) {
-  // done
+var concat = require('serial-concat-files')()
+concat(['./test/a', './test/b', './test/b'], './test/files/allc')
+// OR
+var concat = require('serial-concat-files')({ 
+  post: '<POST>', // 
+  last:'<LAST>',
+  first:'<FIRST>',
+  pre:'<PRE>'
+})
+concat(['./test/a', './test/b', './test/b'], './test/files/allc', function (error) {
+  // <FIRST>this is a<POST><PRE>this is b<POST><PRE>this is b<LAST>
 })
 ```
 
-## Roadmap
-
-```javascript
-// 2.0 - Update to es6 , make it dynamic to not need len.
-```
