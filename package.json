@@ -1,12 +1,13 @@
 {
   "name": "serial-concat-files",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "concat files in serial order",
   "main": "index.js",
   "scripts": {
     "test": "npm run mocha && npm run standard",
     "mocha": "node node_modules/mocha/bin/mocha test/test.js  ",
-    "standard": "node node_modules/standard/bin/cmd.js || standard"
+    "standard": "node node_modules/standard/bin/cmd.js || standard",
+    "standard:fix": "node node_modules/standard/bin/cmd.js --fix || standard --fix"
   },
   "repository": {
     "type": "git",
